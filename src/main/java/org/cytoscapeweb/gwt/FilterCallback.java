@@ -1,4 +1,4 @@
-package org.cytoscapeweb;
+package org.cytoscapeweb.gwt;
 
 import com.google.gwt.core.client.JavaScriptObject;
 

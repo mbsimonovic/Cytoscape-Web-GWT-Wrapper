@@ -12,5 +12,5 @@
 	<script src="js/src/cytoscapeweb.js" />
 	<!-- REMOVED: utility functions defined in the main window that get around casting problems -->
 	
-	<source path="cytoscapeweb"/>
+	<source path="gwt"/>
 </module>

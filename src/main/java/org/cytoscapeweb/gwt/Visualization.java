@@ -1,4 +1,4 @@
-package org.cytoscapeweb;
+package org.cytoscapeweb.gwt;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayMixed;
@@ -18,24 +18,24 @@ import com.google.gwt.core.client.JsArrayMixed;
  */
 public class Visualization extends JavaScriptObject{
 	protected Visualization(){}
-	
+
 	private static final native JavaScriptObject wrap(ReadyCallback c)/*-{
 		var f = function(){
-			c.@org.cytoscapeweb.ReadyCallback::invoke()();
+			c.@org.cytoscapeweb.gwt.ReadyCallback::invoke()();
 		};
 		return f;
 	}-*/;
 	
 	private static final native JavaScriptObject wrap(EventCallback c)/*-{
 		var f = function(e){
-			c.@org.cytoscapeweb.EventCallback::invoke(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			c.@org.cytoscapeweb.gwt.EventCallback::invoke(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 		};
 		return f;
 	}-*/;
 	
 	private static final native JavaScriptObject wrap(FilterCallback c)/*-{
 		var f = function(e){
-			return c.@org.cytoscapeweb.FilterCallback::invoke(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			return c.@org.cytoscapeweb.gwt.FilterCallback::invoke(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 		};
 		return f;
 	}-*/;
@@ -64,12 +64,12 @@ public class Visualization extends JavaScriptObject{
 	}-*/;
 	
 	public final native void addContextMenuItem(String lbl, String gr, EventCallback callback)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/EventCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/EventCallback;)(callback);
 		this.addContextMenuItem(lbl, gr, fn);
 	}-*/;
 	
 	public final native void addContextMenuItem(String lbl, EventCallback callback)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/EventCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/EventCallback;)(callback);
 		this.addContextMenuItem(lbl, fn);
 	}-*/;
 	
@@ -90,13 +90,13 @@ public class Visualization extends JavaScriptObject{
 	}-*/;
 	
 	public final native JavaScriptObject addListener(String evt, String gr, EventCallback callback)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/EventCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/EventCallback;)(callback);
 		this.addListener(evt, gr, fn);
 		return fn;
 	}-*/;
 	
 	public final native JavaScriptObject addListener(String evt, EventCallback callback)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/EventCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/EventCallback;)(callback);
 		this.addListener(evt, fn);
 		return fn;
 	}-*/;
@@ -144,7 +144,7 @@ public class Visualization extends JavaScriptObject{
 	public final native void deselect()/*-{
 		this.deselect();
 	}-*/;
-	
+
 	public final native void draw(JavaScriptObject options)/*-{
 		this.draw(options);
 	}-*/;
@@ -190,22 +190,22 @@ public class Visualization extends JavaScriptObject{
 	}-*/;
 
 	public final native void filter(String gr, FilterCallback callback, boolean updateVisualMappers)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/FilterCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/FilterCallback;)(callback);
 		this.filter(gr, fn, updateVisualMappers);
 	}-*/;
 	
 	public final native void filter(String gr, FilterCallback callback)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/FilterCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/FilterCallback;)(callback);
 		this.filter(gr, fn);
 	}-*/;
 	
 	public final native void filter(FilterCallback callback, boolean updateVisualMappers)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/FilterCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/FilterCallback;)(callback);
 		this.filter(fn, updateVisualMappers);
 	}-*/;
 	
 	public final native void filter(FilterCallback callback)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/FilterCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/FilterCallback;)(callback);
 		this.filter(fn);
 	}-*/;
 	
@@ -311,7 +311,7 @@ public class Visualization extends JavaScriptObject{
 	
 	
 	public final native void ready(ReadyCallback callback)/*-{
-		var fn = @org.cytoscapeweb.Visualization::wrap(Lorg/cytoscapeweb/ReadyCallback;)(callback);
+		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/ReadyCallback;)(callback);
 		this.ready(fn);
 	}-*/;
 	
@@ -599,5 +599,5 @@ public class Visualization extends JavaScriptObject{
 		toDraw.network = network_json;
         this.draw(toDraw);
 	}-*/;
-	
+
 }

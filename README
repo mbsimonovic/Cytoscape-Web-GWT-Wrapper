@@ -2,9 +2,8 @@ This project is simply a thin wrapper around the Cytoscape Web API.  Include it
 in your project as you would a normal GWT module.
 
 **Configuration**
-- Library is by default set to use the human-readable javascript files to 
-  assist with debugging.  To change over to the minimized files to improve
-  performance, edit the CytoscapeWeb.gwt.xml file.
+- There's two modules, CytoscapeWebDev and CytoscapeWeb. The former could
+  be used during development (uses non-minified JavaScript), and the later for production.
 
 **Known Issues**
 - Project has issues, with Firefox 4+, but not Firefox 3.6.  The problem likely

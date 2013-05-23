@@ -33,8 +33,8 @@
             <id>milan</id>
             <name>Milan Simonovic</name>
             <email>milan.simonovic@imls.uzh.ch</email>
-            <organization>UZH</organization>
-            <timezone>GMT-1</timezone>
+            <organization>SIB</organization>
+            <timezone>GMT+1</timezone>
         </developer>
     </developers>
 

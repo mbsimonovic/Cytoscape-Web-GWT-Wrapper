@@ -100,8 +100,16 @@ public class Visualization extends JavaScriptObject{
 		this.addListener(evt, fn);
 		return fn;
 	}-*/;
-	
-	public final native void addNode(int x, int y, JavaScriptObject data, boolean updateVisualMappers)/*-{
+
+    public final native void addElements(JsArrayMixed items, boolean updateVisualMappers)/*-{
+        this.addElements(items, updateVisualMappers);
+    }-*/;
+
+    public final native void addElements(JavaScriptObject items)/*-{
+        this.addElements(items);
+    }-*/;
+
+    public final native void addNode(int x, int y, JavaScriptObject data, boolean updateVisualMappers)/*-{
 		this.addNode(x, y, data, updateVisualMappers);
 	}-*/;
 	
@@ -208,8 +216,29 @@ public class Visualization extends JavaScriptObject{
 		var fn = @org.cytoscapeweb.gwt.Visualization::wrap(Lorg/cytoscapeweb/gwt/FilterCallback;)(callback);
 		this.filter(fn);
 	}-*/;
-	
-	public final native JavaScriptObject firstNeighbors(JsArrayMixed nodes, boolean ignoreFilteredOut)/*-{
+
+    /**
+     * @param nodeEdgeIds IDs or the Node/Edge objects you want to make or keep visible.
+     */
+    public final native void filterWithArray(String gr, JsArrayMixed nodeEdgeIds, boolean updateVisualMappers)/*-{
+        this.filter(gr, nodes, updateVisualMappers);
+    }-*/;
+
+    /**
+     * @param nodeEdgeIds IDs or the Node/Edge objects you want to make or keep visible.
+     */
+    public final native void filterWithArray(String gr, JsArrayMixed nodeEdgeIds)/*-{
+        this.filter(gr, nodes);
+    }-*/;
+
+    /**
+     * @param nodeEdgeIds IDs or the Node/Edge objects you want to make or keep visible.
+     */
+    public final native void filterWithArray(JsArrayMixed nodeEdgeIds)/*-{
+        this.filter(nodes);
+    }-*/;
+
+    public final native JavaScriptObject firstNeighbors(JsArrayMixed nodes, boolean ignoreFilteredOut)/*-{
 		return this.firstNeighbors(nodes, ignoreFilteredOut);
 	}-*/;
 	
@@ -261,11 +290,28 @@ public class Visualization extends JavaScriptObject{
 		return this.nodeLabelsVisible();
 	}-*/;
 
+    /**
+     *
+     * @return #nodes(false)
+     */
 	public final native JsArrayMixed nodes()/*-{
 		return this.nodes();
 	}-*/;
-	
-	public final native void nodeTooltipsEnabled(boolean enabled)/*-{
+
+    public final native JsArrayMixed nodes(boolean topLevelOnly)/*-{
+        return this.nodes(topLevelOnly);
+    }-*/;
+
+
+    public final native JsArrayMixed childNodes(JavaScriptObject parent)/*-{
+        return this.childNodes(parent);
+    }-*/;
+
+    public final native JsArrayMixed parentNodes()/*-{
+        return this.parentNodes();
+    }-*/;
+
+    public final native void nodeTooltipsEnabled(boolean enabled)/*-{
 		this.nodeTooltipsEnabled(enabled);
 	}-*/;
 	
@@ -451,8 +497,8 @@ public class Visualization extends JavaScriptObject{
 		return this.selected();
 	}-*/;
 	
-	public final native String sif(String interactionAttr)/*-{
-		return this.sif(interactionAttr);
+	public final native String sif(JavaScriptObject options)/*-{
+		return this.sif(options);
 	}-*/;
 	
 	public final native String sif()/*-{

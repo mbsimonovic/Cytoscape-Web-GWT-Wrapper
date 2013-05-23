@@ -1,5 +1,6 @@
-This project is simply a thin wrapper around the Cytoscape Web API.  Include it 
-in your project as you would a normal GWT module.
+This project is simply a thin wrapper around the Cytoscape Web API (v1.0.3).
+Include it in your project as you would a normal GWT module.
+
 
 **Configuration**
 - There's two modules, CytoscapeWebDev and CytoscapeWeb. The former could
@@ -7,14 +8,12 @@ in your project as you would a normal GWT module.
 
 **Known Issues**
 - Project has issues, with Firefox 4+, but not Firefox 3.6.  The problem likely
-  has to do with the frame that Flash gets put into.  See my Google Group
+  has to do with the frame that Flash gets put into.  See the Google Group
   discussion link at the bottom of the README.
 - Wrapper is perhaps too thin, as many of the parameters are simply GWT's 
   JavaScriptObject.  More objects should be created to simplify interaction
   with the library.  Prefer the methods with String parameters to simplify
   things.
-- Based on Version 0.7.3, which is dated.  API should be updated to open up the
-  features of the latest releases.
 
 **Useful Links**
 http://cytoscapeweb.cytoscape.org/documentation
